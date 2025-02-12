@@ -1,0 +1,257 @@
+:root {
+  --united-nations-blue: hsl(49, 56%, 58%);
+  --bright-navy-blue: hsl(41, 57%, 51%);
+  --spanish-gray: hsl(0, 0%, 60%);
+  --black-coral: hsl(49, 8%, 42%);
+  --oxford-blue: hsl(44, 97%, 12%);
+  --yale-blue: hsl(46, 72%, 33%);
+  --blue-ncs: hsl(44, 100%, 36%);
+  --gunmetal: hsl(46, 33%, 20%);
+  --gainsboro: hsl(0, 0%, 88%);
+  --cultured: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --onyx: hsl(0, 0%, 25%);
+  --jet: hsl(0, 0%, 20%);
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-montserrat: "Montserrat", sans-serif;
+  --fs-1: calc(20px + 3.5vw);
+  --fs-2: calc(18px + 1.6vw);
+  --fs-3: calc(16px + 0.45vw);
+  --fs-4: 15px;
+  --fs-5: 14px;
+  --fs-6: 13px;
+  --fs-7: 12px;
+  --fs-8: 11px;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --transition: 0.25s ease-in-out;
+  --section-padding: 60px;
+  --radius-15: 15px;
+  --radius-25: 25px;
+}
+
+/* RESET */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+body {
+  font-family: var(--ff-poppins);
+  background: var(--white);
+  line-height: 1.6;
+  color: var(--black-coral);
+}
+
+h1, h2, h3 {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-800);
+  text-transform: uppercase;
+}
+
+/* ✅ تحسين الصور */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* ✅ HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: var(--white);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header .logo img {
+  max-height: 50px;
+}
+
+.header .social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.header .social-list a {
+  font-size: 1.2rem;
+  color: var(--oxford-blue);
+}
+
+/* ✅ HERO SECTION */
+.hero {
+  background-image: url("/assets/images/hero-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .hero-title {
+  color: var(--white);
+  font-size: var(--fs-1);
+}
+
+.hero .hero-text {
+  color: var(--white);
+  font-size: var(--fs-5);
+}
+
+/* ✅ TOUR SEARCH */
+.tour-search {
+  padding: var(--section-padding) 0;
+  background: var(--bright-navy-blue);
+}
+
+.tour-search .tour-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tour-search .input-wrapper {
+  flex: 1;
+  min-width: 200px;
+}
+
+.tour-search .input-field {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid var(--gainsboro);
+}
+
+/* ✅ POPULAR SECTION */
+.popular {
+  padding: var(--section-padding) 0;
+}
+
+.popular .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popular .popular-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.popular .card-content {
+  background: var(--cultured);
+  padding: 20px;
+  border-radius: var(--radius-15);
+  text-align: center;
+}
+
+/* ✅ PACKAGES SECTION */
+.package {
+  padding: var(--section-padding) 0;
+}
+
+.package .package-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.package .package-card {
+  flex: 1;
+  max-width: 350px;
+  background: var(--cultured);
+  border-radius: var(--radius-15);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.package .card-banner img {
+  width: 100%;
+  max-height: 200px;
+  border-top-left-radius: var(--radius-15);
+  border-top-right-radius: var(--radius-15);
+}
+
+/* ✅ GALLERY SECTION */
+.gallery {
+  padding: var(--section-padding) 0;
+}
+
+.gallery .gallery-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery .gallery-image img {
+  width: 100%;
+  border-radius: var(--radius-15);
+  max-height: 200px;
+}
+
+/* ✅ CTA */
+.cta {
+  background: var(--yale-blue);
+  padding: var(--section-padding) 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.cta .btn {
+  background: var(--bright-navy-blue);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: var(--fw-700);
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.cta .btn:hover {
+  background: var(--blue-ncs);
+}
+
+/* ✅ FOOTER */
+.footer {
+  background: var(--gunmetal);
+  padding: var(--section-padding) 0;
+  color: var(--gainsboro);
+  text-align: center;
+}
+
+.footer .logo img {
+  max-height: 50px;
+}
+
+.footer .copyright {
+  font-size: var(--fs-7);
+}
